@@ -8,12 +8,15 @@ public class Gecko {
         System.out.println("Hello " + name + "!");
     }
 
+
     public Gecko(String name) {
         this(name, 0);
     }
 
     public Gecko() {
-        this("Unknown", 0);
+        this.name = "Unknown";
+        this.age = 0;
+        System.out.println("Hello!");
     }
 
     public String getName() {
@@ -54,6 +57,7 @@ public class Gecko {
                 break;
             default:
                 System.out.println("Impossible Gecko");
+                break;
         }
     }
 }

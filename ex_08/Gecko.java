@@ -1,48 +1,40 @@
 public class Gecko {
     private String name;
     private int age;
-    private int energy = 100; // default value
+    private int energy = 100;
 
-    // Constructor with name and age parameters
     public Gecko(String name, int age) {
         this.name = name;
         this.age = age;
         System.out.println("Hello " + name + "!");
     }
 
-    // Constructor with only name parameter (default age to 0)
     public Gecko(String name) {
-        this(name, 0); // Calls the other constructor
+        this(name, 0);
     }
 
-    // Default constructor
     public Gecko() {
         this.name = "Unknown";
         this.age = 0;
         System.out.println("Hello!");
     }
 
-    // Getter method for the name attribute
     public String getName() {
         return name;
     }
 
-    // Getter for age
     public int getAge() {
         return age;
     }
 
-    // Setter for age
     public void setAge(int age) {
         this.age = age;
     }
 
-    // Getter for energy
     public int getEnergy() {
         return energy;
     }
 
-    // Setter for energy ensuring it remains within [0, 100]
     public void setEnergy(int energy) {
         if (energy > 100) {
             this.energy = 100;
@@ -116,6 +108,34 @@ public class Gecko {
             default:
                 System.out.println("Impossible Gecko");
                 break;
+        }
+    }
+
+       public void fraternize(Object friend) {
+        if (friend instanceof Gecko) {
+            Gecko geckoFriend = (Gecko) friend;
+            if (this.energy >= 30 && geckoFriend.energy >= 30) {
+                this.setEnergy(energy - 30);
+                geckoFriend.setEnergy(geckoFriend.energy - 30);
+                System.out.println("I'm going to drink with " + geckoFriend.name + "!");
+                System.out.println(geckoFriend.name + " says: I'm going to drink with " + this.name + "!");
+            } else if (this.energy < 30 && geckoFriend.energy < 30) {
+                System.out.println("Not today!");
+                System.out.println(geckoFriend.name + " says: Not today!");
+            } else if (this.energy < 30) {
+                System.out.println("Sorry " + geckoFriend.name + ", I'm too tired to go out tonight.");
+                System.out.println(geckoFriend.name + " says: Oh! That's too bad, another time then!.");
+            } else {
+                System.out.println(geckoFriend.name + " says: Sorry " + this.name + ", I'm too tired to go out tonight.");
+                System.out.println("Oh! That's too bad, another time then!");
+            }
+        } else if (friend instanceof Snake) {
+            if (this.energy >= 10) {
+                System.out.println("LET'S RUN AWAY!!!");
+                this.energy = 0;
+            } else {
+                System.out.println("...");
+            }
         }
     }
 }
