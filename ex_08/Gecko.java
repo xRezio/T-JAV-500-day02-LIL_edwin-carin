@@ -119,15 +119,15 @@ public class Gecko {
                 this.setEnergy(energy - 30);
                 geckoFriend.setEnergy(geckoFriend.energy - 30);
                 System.out.println("I'm going to drink with " + geckoFriend.name + "!");
-                System.out.println(geckoFriend.name + " says: I'm going to drink with " + this.name + "!");
+                System.out.println("I'm going to drink with " + this.name + "!");
             } else if (this.energy < 30 && geckoFriend.energy < 30) {
                 System.out.println("Not today!");
-                System.out.println(geckoFriend.name + " says: Not today!");
+                System.out.println("Not today!");
             } else if (this.energy < 30) {
                 System.out.println("Sorry " + geckoFriend.name + ", I'm too tired to go out tonight.");
-                System.out.println(geckoFriend.name + " says: Oh! That's too bad, another time then!.");
+                System.out.println("Oh! That's too bad, another time then!.");
             } else {          
-                System.out.println(geckoFriend.name + " says: Sorry " + this.name + ", I'm too tired to go out tonight.");
+                System.out.println("Sorry " + this.name + ", I'm too tired to go out tonight.");
                 System.out.println("Oh! That's too bad, another time then!");
             }
         } else if (friend instanceof Snake) {
