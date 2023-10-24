@@ -125,7 +125,7 @@ public class Gecko {
                 System.out.println("Not today!");
             } else if (this.energy < 30) {
                 System.out.println("Sorry " + geckoFriend.name + ", I'm too tired to go out tonight.");
-                System.out.println("Oh! That's too bad, another time then!.");
+                System.out.println("Oh! That's too bad, another time then!");
             } else {          
                 System.out.println("Sorry " + this.name + ", I'm too tired to go out tonight.");
                 System.out.println("Oh! That's too bad, another time then!");
