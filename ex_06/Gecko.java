@@ -49,11 +49,11 @@ public class Gecko {
 
     public void eat(String food) {
         switch (food.toLowerCase()) {
-            case "Meat":
+            case "meat":
                 setEnergy(energy + 10);
                 System.out.println("Yummy!");
                 break;
-            case "Vegetable":
+            case "vegetable":
                 setEnergy(energy - 10);
                 System.out.println("Erk!");
                 break;
@@ -62,6 +62,7 @@ public class Gecko {
                 break;
         }
     }
+
 
     public void hello(String recipient) {
         System.out.println("Hello " + recipient + ", I'm " + name + "!");

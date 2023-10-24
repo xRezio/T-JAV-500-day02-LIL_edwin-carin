@@ -69,6 +69,7 @@ public class Gecko {
         }
     }
 
+
     public void work() {
         if (energy >= 25) {
             setEnergy(energy - 9);

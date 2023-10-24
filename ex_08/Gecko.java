@@ -61,6 +61,7 @@ public class Gecko {
         }
     }
 
+
     public void work() {
         if (energy >= 25) {
             setEnergy(energy - 9);
@@ -125,7 +126,7 @@ public class Gecko {
             } else if (this.energy < 30) {
                 System.out.println("Sorry " + geckoFriend.name + ", I'm too tired to go out tonight.");
                 System.out.println(geckoFriend.name + " says: Oh! That's too bad, another time then!.");
-            } else {
+            } else {          
                 System.out.println(geckoFriend.name + " says: Sorry " + this.name + ", I'm too tired to go out tonight.");
                 System.out.println("Oh! That's too bad, another time then!");
             }
